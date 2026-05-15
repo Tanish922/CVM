@@ -1,0 +1,7 @@
+let numA = 10;
+let numB = 20;
+print numA + numB; 
+
+let strA = "10";
+let strB = "20";
+print strA + strB;

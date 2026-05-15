@@ -1,0 +1,16 @@
+let greeting = "System online. Initiating countdown...";
+print greeting;
+
+let count = 3;
+
+while count < 6 {
+    if count == 5 {
+        print "Final orbit reached!";
+    } else {
+        print "Orbitting...";
+    }
+    
+    count = count + 1;
+}
+
+print "Execution complete.";
