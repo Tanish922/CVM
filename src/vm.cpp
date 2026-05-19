@@ -28,7 +28,18 @@ void VM::run(Chunk& chunk) {
                 else if (a.type == ValType::STRING && b.type == ValType::STRING) push(Value(a.str == b.str ? 1 : 0));
                 else push(Value(0)); break; 
             }
-            case OP_LESS: { Value b = pop(); Value a = pop(); push(Value(a.num < b.num ? 1 : 0)); break; }
+            case OP_LESS: { 
+                Value b = pop(); Value a = pop(); 
+                if (a.type == ValType::NUMBER && b.type == ValType::NUMBER) push(Value(a.num < b.num ? 1 : 0)); 
+                else { std::cout << "VM Error: Cannot compare strings.\n"; return; }
+                break; 
+            }
+            case OP_GREATER: { 
+                Value b = pop(); Value a = pop(); 
+                if (a.type == ValType::NUMBER && b.type == ValType::NUMBER) push(Value(a.num > b.num ? 1 : 0)); 
+                else { std::cout << "VM Error: Cannot compare strings.\n"; return; }
+                break; 
+            }
             case OP_PRINT: {
                 Value val = pop();
                 if (val.type == ValType::NUMBER) std::cout << val.num << "\n"; else std::cout << val.str << "\n";

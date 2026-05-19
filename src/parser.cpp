@@ -114,7 +114,7 @@ std::unique_ptr<Expr> Parser::equality() {
 
 std::unique_ptr<Expr> Parser::comparison() {
     auto expr = term();
-    while (match({TokenType::LESS})) {
+    while (match({TokenType::LESSER, TokenType::GREATER})) {
         Token op = previous();
         auto right = term();
         expr = std::make_unique<BinaryExpr>(std::move(expr), op, std::move(right));

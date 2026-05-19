@@ -67,7 +67,8 @@ void Lexer::scanToken() {
         case '*': addToken(TokenType::STAR); break;
         case '/': addToken(TokenType::SLASH); break;
         case ';': addToken(TokenType::SEMICOLON); break;
-        case '<': addToken(TokenType::LESS); break;
+        case '<': addToken(TokenType::LESSER); break;
+        case '>': addToken(TokenType::GREATER); break;
         case '=': addToken(match('=') ? TokenType::EQUAL : TokenType::ASSIGN); break;
         case '"': stringLiteral(); break;
         case ' ': case '\r': case '\t': break;

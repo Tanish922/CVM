@@ -1,0 +1,22 @@
+print "--- CVM++ Factorial Calculator ---";
+
+let target = 7;
+let result = 1;
+let current = target;
+
+print "Calculating factorial for:";
+print target;
+
+while current > 0 {
+    result = result * current;
+    current = current - 1;
+}
+
+print "Result:";
+print result;
+
+if result == 120 {
+    print "System Check: PASS";
+} else {
+    print "System Check: FAIL";
+}

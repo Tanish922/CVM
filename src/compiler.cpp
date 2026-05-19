@@ -92,7 +92,8 @@ void Compiler::compileExpression(const Expr* expr) {
             case TokenType::STAR:  emitByte(OP_MUL); break;
             case TokenType::SLASH: emitByte(OP_DIV); break;
             case TokenType::EQUAL: emitByte(OP_EQUAL); break;
-            case TokenType::LESS:  emitByte(OP_LESS); break;
+            case TokenType::LESSER:  emitByte(OP_LESS); break;
+            case TokenType::GREATER: emitByte(OP_GREATER); break;
             default: break;
         }
     }

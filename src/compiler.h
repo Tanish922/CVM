@@ -14,9 +14,9 @@ struct Value {
 };
 
 enum OpCode : uint8_t {
-    OP_CONSTANT = 0, OP_ADD, OP_SUB, OP_MUL, OP_DIV, OP_EQUAL, OP_LESS,
+    OP_CONSTANT = 0, OP_ADD, OP_SUB, OP_MUL, OP_DIV, OP_EQUAL, OP_LESS, OP_GREATER,
     OP_PRINT, OP_DEFINE_VAR, OP_GET_VAR, 
-    OP_SET_VAR, // <-- NEW
+    OP_SET_VAR, 
     OP_POP, OP_JUMP_IF_FALSE, OP_JUMP, OP_LOOP,
     OP_HALT
 };
@@ -49,6 +49,8 @@ struct Chunk {
                 case OP_DIV: std::cout << "OP_DIV\n"; offset++; break;
                 case OP_PRINT: std::cout << "OP_PRINT\n"; offset++; break;
                 case OP_POP: std::cout << "OP_POP\n"; offset++; break;
+                case OP_LESS: std::cout << "OP_LESS\n"; offset++; break;
+                case OP_GREATER: std::cout << "OP_GREATER\n"; offset++; break; // <-- NEW LINE
                 case OP_DEFINE_VAR: std::cout << "OP_DEFINE_VAR " << (int)code[offset + 1] << " (name: " << variables[code[offset + 1]] << ")\n"; offset += 2; break;
                 case OP_GET_VAR: std::cout << "OP_GET_VAR " << (int)code[offset + 1] << " (name: " << variables[code[offset + 1]] << ")\n"; offset += 2; break;
                 case OP_SET_VAR: std::cout << "OP_SET_VAR " << (int)code[offset + 1] << " (name: " << variables[code[offset + 1]] << ")\n"; offset += 2; break;
