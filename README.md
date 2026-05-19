@@ -8,7 +8,7 @@ CVM++ is a custom, dynamically-typed scripting language and stack-based virtual 
 ## PROJECT STRUCTURE:
 
 ```
-CVM/
+CVM++/
 ├── CMakeLists.txt        # Build system configuration
 ├── demo.cvm              # Sample script: Factorial Calculator
 ├── test1.cvm              # Sample script: General loop and if/else tests
