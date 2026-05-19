@@ -11,7 +11,8 @@ CVM++ is a custom, dynamically-typed scripting language and stack-based virtual 
 CVM/
 ├── CMakeLists.txt        # Build system configuration
 ├── demo.cvm              # Sample script: Factorial Calculator
-├── test.cvm              # Sample script: General language feature tests
+├── test1.cvm              # Sample script: General loop and if/else tests
+├── test2.cvm              # Sample script: Arithmetic and strings tests
 ├── readme.txt            # Project documentation and instructions
 ├── build/                # Generated folder for compiled object files and the .exe
 └── src/                  # Core C++ Source Code
