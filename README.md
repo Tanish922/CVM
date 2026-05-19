@@ -1,4 +1,4 @@
-# CVM++ Virtual Machine & Language Compiler
+# CVM++ - Virtual Machine & Language Compiler
 
 
 ## OVERVIEW:
